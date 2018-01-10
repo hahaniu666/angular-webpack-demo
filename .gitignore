@@ -1,0 +1,18 @@
+angular-webpack-demo/build
+
+angular-webpack-demo/node_modules
+
+angular-webpack-demo/.tmp
+
+### IntelliJ IDEA ###
+angular-webpack-demo/.idea
+angular-webpack-demo/*.iws
+angular-webpack-demo/*.iml
+angular-webpack-demo/*.ipr
+
+
+angular-webpack-demo/.myStates.js
+
+
+
+.idea
