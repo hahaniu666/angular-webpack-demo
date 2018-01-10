@@ -1,18 +1,20 @@
-angular-webpack-demo/build
 
-angular-webpack-demo/node_modules
-
-angular-webpack-demo/.tmp
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
 
 ### IntelliJ IDEA ###
-angular-webpack-demo/.idea
-angular-webpack-demo/*.iws
-angular-webpack-demo/*.iml
-angular-webpack-demo/*.ipr
-
-
-angular-webpack-demo/.myStates.js
-
-
-
 .idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+build/
+.tmp/
+build/
+node_modules/
