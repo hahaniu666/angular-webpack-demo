@@ -1,0 +1,24 @@
+//弹窗提示
+.alert-successCont {
+  box-sizing: border-box;
+  background: rgba(51,51,51,.7);
+  padding: 0;
+  min-width: 100px;
+  box-shadow: none;
+  md-card{
+    box-shadow: none;
+    background: transparent;
+  }
+  .sus {
+    text-align: center;
+    color: #fff;
+    p {
+      font-size: 14px;
+      color: #fff;
+      margin-top: 0;
+      margin-bottom: -2px;
+      padding: 0 5px;
+    }
+  }
+
+}

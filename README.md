@@ -63,3 +63,36 @@ webpack-bundle-report
 然后
     
     webpack-dev-server --open --env dev --host 192.168.0.41
+
+
+
+# 一些全局配置记录
+
+设置默认访问页面，在下面的js中
+
+     angular-webpack-demo/src/app/components/_common/confUrlRouter.js
+    
+前提是在confstate.js中要配置好路径，如下
+
+```$xslt
+
+
+    function confState($stateProvider) {
+        $stateProvider.state("main.ddd", {
+            url: "/ddd",
+            sticky: true,
+            deepStateRedirect: true,
+            views: {
+                "ddd@main": {
+                    template: html,
+                    controller: controller
+                }
+            }
+        });
+    }
+
+```
+ 代码中的url:"/ddd"，若是想默认访问此页面，则，在上述路径下的js中，
+ 
+     $urlRouterProvider.otherwise('/ddd');       
+ 即可，

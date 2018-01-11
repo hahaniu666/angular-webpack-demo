@@ -11,16 +11,22 @@ import d3 from "d3";
 import "ui-router-extras";
 import "./components/ag-iconfont/style.css";
 
+import services from './components/services'
+
+
+console.log("appConf", appConf);
+
 console.log("global === window", global === window, global.d3, d3);
 export default angular.module('app', [
     uiRouter,
     appHttp.name,
     appConf.name,
     appState.name,
+    services.name,
     appCommon.name,
     "ct.ui.router.extras"
 ])
-    // .config(confState)
+// .config(confState)
     .run(runState)
     .run(function () {
         console.log("00099999999999-------------------zll12")

@@ -6,7 +6,7 @@ import "./css.scss"
 
 console.log("-000000 ----", uiRouter);
 
-export default angular.module('main', [uiRouter,]).config(confState)
+export default angular.module('main', [uiRouter]).config(confState)
 // .run(appRun);
 
 
