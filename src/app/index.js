@@ -10,7 +10,9 @@ import appState from "./components/_state"
 import runState from "./runState";
 import confState from "./confState.js";
 
-import filters from "./components/filters"
+import filters from "./components/filters";
+import directives from "./components/directives";
+
 
 import d3 from "d3";
 import "ui-router-extras";
@@ -29,6 +31,7 @@ export default angular.module('app', [
     appState.name,
     services.name,
     filters.name,
+    directives.name,
     appCommon.name,
     "ct.ui.router.extras"
 ])
