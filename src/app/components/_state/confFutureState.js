@@ -1,4 +1,4 @@
-//import futureStates from "./futureStates.js";
+//import futureStates from "./futureStates.js";   //  从插件生成的global.myStates中获取futureStates
 import stateFactory from "./stateFactory";
 
 var futureStates = global.myStates; // FIXME :

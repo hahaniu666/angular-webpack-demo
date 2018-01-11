@@ -68,7 +68,7 @@ webpack-bundle-report
 
 # 一些全局配置记录
 
-设置默认访问页面，在下面的js中
+### 1.设置默认访问页面，在下面的js中
 
      angular-webpack-demo/src/app/components/_common/confUrlRouter.js
     
@@ -96,3 +96,20 @@ webpack-bundle-report
  
      $urlRouterProvider.otherwise('/ddd');       
  即可，
+
+
+### 2.配置开发环境还是测试环境或者线上环境
+
+在以下目录下
+
+    angular-webpack-demo/src/app/components/_conf
+    
+其中，conf需配置成service服务，然后在各个js文件中依赖注入以下conf，然后
+
+    console.log(conf);
+    
+即可看到里面的配置文件内容
+
+### 3.异步加载必须代码
+
+    angular-webpack-demo/src/app/components/_state

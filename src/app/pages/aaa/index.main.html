@@ -1,7 +1,7 @@
 <!-- comment -->
 <div class=".btpka3-pages-mian-aaa">
     aaa {{1+2}} <img src="../../components/_layout/logo.png" style="width:60px;">
-    <button ng-click="count=count+1"> 计数器 aaa : {{count}}</button>
+    <button ng-click="count=count+1"> 计数器 aaa : {{count|num:2}}</button>
     <md-icon class="ks-icon" md-font-set="ks-icon" md-font-icon="ag-arrow_left"></md-icon>
 
 
@@ -11,6 +11,8 @@
     <div ui-view="a1" ng-show="$state.includes('main.aaa.a1')"></div>
     <div ui-view="a2" ng-show="$state.includes('main.aaa.a2')"></div>
 123123
+
+
     <md-icon class="ks-icon" md-font-set="ks-icon" md-font-icon="ag-arrow-right-s"></md-icon>
 
 </div>

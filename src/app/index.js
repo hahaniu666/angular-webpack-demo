@@ -1,12 +1,17 @@
+import appConf from "./components/_conf";
+
+import "./components/global"
 import angular from "angular";
 import uiRouter from "angular-ui-router";
 import "angular-material/angular-material.css";
-import appConf from "./components/_conf";
 import appHttp from "./components/_http";
 import appCommon from "./components/_common"
 import appState from "./components/_state"
 import runState from "./runState";
 import confState from "./confState.js";
+
+import filters from "./components/filters"
+
 import d3 from "d3";
 import "ui-router-extras";
 import "./components/ag-iconfont/style.css";
@@ -23,6 +28,7 @@ export default angular.module('app', [
     appConf.name,
     appState.name,
     services.name,
+    filters.name,
     appCommon.name,
     "ct.ui.router.extras"
 ])

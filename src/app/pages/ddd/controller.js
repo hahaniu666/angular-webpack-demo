@@ -4,7 +4,11 @@ function controller($scope, $state, alertService) {
         $state.go(state);
     };
     $scope.count = 5555555555;
-    alertService.msgAlert("exclamation-circle", "版本过低请升级");
+
+
+    $scope.dialogShow = function () {
+        alertService.msgAlert("exclamation-circle", "版本过低请升级");
+    }
 }
 
 controller.$inject = ['$scope', '$state', 'alertService'];
