@@ -29,7 +29,6 @@ var base = __dirname;
 var appName = 'app';
 
 
-
 var vendorCssPlugin = new ExtractTextPlugin({
     filename: isProd ? '[name].[hash].css' : '[name].css'
 });
@@ -307,7 +306,6 @@ const config = {
             // },
 
 
-
             {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
                 use: [
@@ -352,7 +350,7 @@ const config = {
         port: 8080,
         inline: true,
         hot: true,
-        open:true,
+        open: true,
         clientLogLevel: "info",
         compress: false,
         quiet: false
