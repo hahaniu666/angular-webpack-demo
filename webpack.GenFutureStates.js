@@ -110,7 +110,7 @@ class GenFutureStates {
             return tmpStates[key]
         });
 
-        let jsContent = `/* comment test btpka3. */ module.exports = ${JSON.stringify(stateArr)};`;
+        let jsContent = `/* comment test hahaniu. */ module.exports = ${JSON.stringify(stateArr)};`;
         fs.writeFileSync(stateJsonFile, jsContent);  // FIXME 目录不存在
     }
 

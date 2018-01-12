@@ -8,7 +8,7 @@
 .springBeans
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -18,3 +18,4 @@ build/
 .tmp/
 build/
 node_modules/
+.myStates.js
