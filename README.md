@@ -113,3 +113,14 @@ webpack-bundle-report
 ### 3.异步加载必须代码
 
     angular-webpack-demo/src/app/components/_state
+
+
+# 通过nodejs 的http-server访问build，类似webpack-dev-server一样的效果
+
+首先安装http-server
+
+    npm install http-server -g
+    
+然后执行 在项目根目录下执行
+
+    http-server 

@@ -33,6 +33,8 @@ const statesObj = states.reduce((preVal, curVal, curIdx) => {
     return preVal
 }, {});
 
+console.log('statesObj', statesObj);
+
 class GenFutureStates {
 
     /**
@@ -62,16 +64,21 @@ class GenFutureStates {
         let outputPath = compilation.getPath(compiler.outputPath);
         // html-webpack-plugin 要生成的 html的相对路径
         let htmlDir = path.resolve(outputPath, self.htmlDir);
+        // console.log('compilation.chunks', compilation.chunks);
 
         // 遍历已经生成，但尚未存盘的 chunk，判断其是否是要保留的 ui-router 的状态js。
         compilation.chunks.forEach(function (chunk) {
+            // console.log('chunk', chunk.name);
 
             // 判断当前 chunk 是否是一个 ui-router 状态
             let curState = statesObj[chunk.name];
+            console.log('curState', curState);
+
             if (!curState) {
                 return;
             }
             let stateName = curState[0];
+            console.log('stateName', stateName);
 
 
             let jsFile = chunk.files.find((file) => {
@@ -84,9 +91,9 @@ class GenFutureStates {
 
             // 已生成js文件的绝对路径
             let jsFileUrl = "./" + path.relative(
-                    htmlDir,
-                    jsPath
-                ).split(path.sep).join('/'); // URL，防止windows操作系统下生成的路径使用 '\'
+                htmlDir,
+                jsPath
+            ).split(path.sep).join('/'); // URL，防止windows操作系统下生成的路径使用 '\'
 
             // let cssArr = chunk.files
             //     .filter(f => f.endsWith(".css"))
@@ -104,10 +111,27 @@ class GenFutureStates {
                 //cssArr
             ];
         });
+        console.log('tmpStates', tmpStates);
 
         // Object => Array : 相当于  Object.values(tmpStates)
         let stateArr = Object.keys(tmpStates).map(key => {
             return tmpStates[key]
+        });
+        console.log('stateArr', stateArr);
+
+        // function sort(a, b) {
+        //     return a - b;
+        // }
+        //
+        // let finalArr = [];
+        // for (let i in stateArr) {
+        //     console.log('finalArr', sort(stateArr[i][0].length))
+        // }
+        stateArr.sort(function (a, b) {
+            console.log('a', a[0].length)
+            console.log('b', b[0].length)
+
+            return a[0].length > b[0].length ? 1 : -1
         });
 
         let jsContent = `/* comment test hahaniu. */ module.exports = ${JSON.stringify(stateArr)};`;

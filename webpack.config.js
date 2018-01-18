@@ -346,7 +346,7 @@ const config = {
             colors: true,
             chunk: false
         },
-        host: '192.168.0.41',
+        host: '127.0.0.1',
         port: 8080,
         inline: true,
         hot: true,

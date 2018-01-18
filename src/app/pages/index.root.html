@@ -7,6 +7,8 @@
         <md-button ui-sref="main.bbb"> bbb</md-button>
         <md-button ui-sref="main.ccc"> ccc</md-button>
         <md-button ui-sref="main.ddd"> ddd1</md-button>
+        <md-button ui-sref="main.eee"> eee</md-button>
+        <md-button ui-sref="main.firstDemo"> firstDemo</md-button>
 
     </div>
     <div style="height: 300px;border:1px solid red;" layout >
@@ -14,6 +16,9 @@
         <div ui-view="bbb" ng-show="$state.includes('main.bbb')"></div>
         <div ui-view="ccc" ng-show="$state.includes('main.ccc')"></div>
         <div ui-view="ddd" ng-show="$state.includes('main.ddd')"></div>
+        <div ui-view="eee" ng-show="$state.includes('main.eee')"></div>
+        <div ui-view="firstDemo" ng-show="$state.includes('main.firstDemo')"></div>
+
 
     </div>
 
