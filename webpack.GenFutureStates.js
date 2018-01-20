@@ -128,9 +128,8 @@ class GenFutureStates {
         //     console.log('finalArr', sort(stateArr[i][0].length))
         // }
         stateArr.sort(function (a, b) {
-            console.log('a', a[0].length)
-            console.log('b', b[0].length)
-
+            // console.log('a', a[0].length)
+            // console.log('b', b[0].length)
             return a[0].length > b[0].length ? 1 : -1
         });
 

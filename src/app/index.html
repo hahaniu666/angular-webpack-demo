@@ -19,7 +19,9 @@
             stroke-width: 3px;
         }
 
-        text { font: 12px sans-serif; }
+        text {
+            font: 12px sans-serif;
+        }
 
         .link {
             fill: none;
@@ -29,14 +31,14 @@
     </style>
 </head>
 
-<body ng-cloak="" layout="column" md-no-ink class=".btpka3-index">
+<body ng-cloak="" layout="column" md-no-ink>
 <div>
     <md-button class="md-fab md-mini" aria-label="Eat cake">
         好
     </md-button>
     state = "{{$state.current.name}}"
 </div>
-<div   layout="row" ui-view style="border:1px solid blue;"></div>
+<div layout="row" ui-view flex></div>
 <state-vis style="position:fixed; bottom: 0;z-index: -1"></state-vis>
 </body>
 </html>

@@ -15,6 +15,7 @@ module.exports = [
     ["main.eee", "/eee"],
     ["main.aaa.a1", "/a1"],
     ["main.aaa.a2", "/a2"],
-    ["main.firstDemo", "/firstDemo"],
+    ["main.sideNav", "/sideNav"],
+    ["main.pullAdd", "/pullAdd"],
 
 ];

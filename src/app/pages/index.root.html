@@ -1,6 +1,6 @@
 <!-- comment -->
-<div flex layout="column">
-    <div class=".btpka3-pages-main">
+<div flex layout="row">
+    <div class="left-btn" layout="column">
         <md-button ui-sref="main.aaa"> aaa</md-button>
 
         <md-button ng-click="goAAA()"> Caaa</md-button>
@@ -8,21 +8,21 @@
         <md-button ui-sref="main.ccc"> ccc</md-button>
         <md-button ui-sref="main.ddd"> ddd1</md-button>
         <md-button ui-sref="main.eee"> eee</md-button>
-        <md-button ui-sref="main.firstDemo"> firstDemo</md-button>
+        <md-button ui-sref="main.sideNav"> sideNav</md-button>
+        <md-button ui-sref="main.pullAdd"> pullAdd</md-button>
 
     </div>
-    <div style="height: 300px;border:1px solid red;" layout >
-        <div ui-view="aaa" ng-show="$state.includes('main.aaa')"></div>
-        <div ui-view="bbb" ng-show="$state.includes('main.bbb')"></div>
-        <div ui-view="ccc" ng-show="$state.includes('main.ccc')"></div>
-        <div ui-view="ddd" ng-show="$state.includes('main.ddd')"></div>
-        <div ui-view="eee" ng-show="$state.includes('main.eee')"></div>
-        <div ui-view="firstDemo" ng-show="$state.includes('main.firstDemo')"></div>
-
-
+    <!---->
+    <div class="right-wrap" layout="row" flex>
+        <div flex ui-view="aaa" ng-show="$state.includes('main.aaa')"></div>
+        <div flex ui-view="bbb" ng-show="$state.includes('main.bbb')"></div>
+        <div flex ui-view="ccc" ng-show="$state.includes('main.ccc')"></div>
+        <div flex ui-view="ddd" ng-show="$state.includes('main.ddd')"></div>
+        <div flex ui-view="eee" ng-show="$state.includes('main.eee')"></div>
+        <div flex ui-view="sideNav" ng-show="$state.includes('main.sideNav')"></div>
+        <div flex ui-view="pullAdd" ng-show="$state.includes('main.pullAdd')"></div>
     </div>
 
-    <div class="a">the color should be <span class="txt">red</span>.</div>
-    <img src="../components/_layout/logo.png" style="width:100px;"/>
+    <!--<div class="a">the color should be <span class="txt">red</span>.</div>
+    <img src="../components/_layout/logo.png" style="width:100px;"/>-->
 </div>
-
